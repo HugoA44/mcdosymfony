@@ -1,0 +1,85 @@
+.single-product{
+    padding: 0 100px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+.single-product img.product-image{
+    width: 32%;
+    height: 100%;
+    background-color: white;
+    padding: 42px 0;
+    border-radius: 15px;
+}
+
+.single-product .informations {
+    width: 64%;   
+}
+
+.single-product .informations span.single-price {
+    width: 48%;  
+    background-color: #ffce00; 
+    padding: 6px 16px;
+    border-radius: 15px;
+    color: white;
+    font-weight: 700;
+}
+
+.return-to-products{
+    padding: 0 100px;
+    margin-top: 40px;
+}
+.return-to-products span{
+    color: rgb(168, 168, 168);
+    font-style: italic;
+    font-size: 14px;
+}
+
+.return-to-products svg{
+    fill:rgb(168, 168, 168) ;
+}
+
+.ingredients-container{
+    padding: 0 80px;
+    margin-top: 70px;
+}
+.ingredients-container h2{
+    margin: 8px 0;
+}
+.ingredients-container p{
+    margin: 8px 0;
+}
+.ingredients {
+    padding: 20px 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    overflow-y: auto;
+    background-color: white;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 10px;
+}
+
+.ingredients .ingredient{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f3f3f3;
+    width: 15%;
+    max-width: 15%;
+    min-width: 15%;
+    margin: 0 10px;
+    border-radius: 10px;
+    padding: 8px 15px;
+
+}
+img.ingredient-image{
+    width: 120%;
+}
+
+.nutritions{
+    padding: 0 80px;
+    margin-top: 50px;
+}

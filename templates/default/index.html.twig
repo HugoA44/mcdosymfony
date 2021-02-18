@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %} {% block title %}Bienvenue{% endblock %} {% block
+body %}
+<section class="hero">
+  <div
+    class="hero-image"
+    style="background: linear-gradient(to left, transparent 0%, rgba(0, 0, 0, 0.808) 100%), url('{{
+      asset('assets/img/hero-banner.jpg')
+    }}');"
+  >
+    <div class="hero-content">
+      <h1 class="hero-title">
+        Bienvenue sur le site des restaurants
+        <highlight>McDonald's France.</highlight>
+      </h1>
+      <button class="btn-empty">Voir les menus</button>
+    </div>
+  </div>
+</section>
+<section id="presentation">
+  <div class="mcdo-iso">
+    <embed
+      src="{{ asset('assets/img/iso.svg') }}"
+      alt="isométrie"
+      class="mcdo-iso"
+    />
+  </div>
+  <div class="presentation-content">
+    <h2 class="presentation-title">Présentation</h2>
+    <p class="presentation-text">
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Blanditiis
+      possimus nesciunt impedit laborum nostrum, maxime totam animi, consectetur
+      aspernatur officia, nihil fugit maiores veritatis doloribus aliquam
+      asperiores eveniet error assumenda?
+    </p>
+  </div>
+</section>
+
+
+{% endblock %}

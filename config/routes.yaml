@@ -1,0 +1,30 @@
+index:
+    path: /
+    controller: App\Controller\DefaultController::index
+
+products:
+    path: /products
+    controller: App\Controller\ProductController::index
+
+product:
+    path: /products/{id}
+    controller: App\Controller\ProductController::productDetails
+
+type:
+    path: /products/type/{type}
+    controller: App\Controller\ProductController::productsType
+
+
+
+
+admin:
+    path: /admin
+    controller: App\Controller\admin\AdminController::index
+
+adminRemoveProduct:
+    path: /admin/removeproduct/{id}
+    controller: App\Controller\admin\AdminController::removeProduct
+
+addproduct:
+    path: /admin/addproduct
+    controller: App\Controller\admin\AdminController::addproduct

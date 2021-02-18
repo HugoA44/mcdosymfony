@@ -1,0 +1,34 @@
+{% extends 'base.html.twig' %} 
+{% block title %}Administration{% endblock %} 
+{%block body %} 
+
+<a href="{{ path('addproduct') }}"><button class="admin-addproduct btn-full">Ajouter un produits</button></a>
+
+<table class="redTable">
+  <thead>
+    <tr>
+      <th>id</th>
+      <th>Nom</th>
+      <th>Prix</th>
+      <th>Image</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    {% for product in products %}
+    <tr>
+      <td>{{ product.id }}</td>
+      <td>{{ product.name }}</td>
+      <td>{{ product.price }} €</td>
+      <td><img src="{{asset('assets/img/products/'~ product.image)}}" class="admin-image"/></td>
+      <td>
+        <a href=" {{ path('product', { id: product.id }) }} "><span class="remove">Détails</span></a>
+        <span class="remove">Modifier</span>
+        <a href="{{ path('adminRemoveProduct', { id: product.id }) }}"><span class="remove">Supprimer</span></a>
+    </td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock %}

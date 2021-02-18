@@ -1,0 +1,107 @@
+{% extends 'base.html.twig' %} {% block title %}{{ product.name }}{%endblock %}
+{%block body %}
+
+<a href="{{ path('index') }}">
+  <div class="return-to-products">
+    <svg
+      version="1.1"
+      id="Layer_1"
+      xmlns="http://www.w3.org/2000/svg"
+      xmlns:xlink="http://www.w3.org/1999/xlink"
+      x="0px"
+      y="0px"
+      viewBox="0 0 492 492"
+      style="enable-background: new 0 0 492 492"
+      xml:space="preserve"
+      width="12px"
+    >
+      <g>
+        <g>
+          <path
+            d="M464.344,207.418l0.768,0.168H135.888l103.496-103.724c5.068-5.064,7.848-11.924,7.848-19.124
+			c0-7.2-2.78-14.012-7.848-19.088L223.28,49.538c-5.064-5.064-11.812-7.864-19.008-7.864c-7.2,0-13.952,2.78-19.016,7.844
+			L7.844,226.914C2.76,231.998-0.02,238.77,0,245.974c-0.02,7.244,2.76,14.02,7.844,19.096l177.412,177.412
+			c5.064,5.06,11.812,7.844,19.016,7.844c7.196,0,13.944-2.788,19.008-7.844l16.104-16.112c5.068-5.056,7.848-11.808,7.848-19.008
+			c0-7.196-2.78-13.592-7.848-18.652L134.72,284.406h329.992c14.828,0,27.288-12.78,27.288-27.6v-22.788
+			C492,219.198,479.172,207.418,464.344,207.418z"
+          />
+        </g>
+      </g>
+    </svg>
+    <span>Retournez aux produits.</span>
+  </div>
+</a>
+
+<div class="single-product">
+  <img
+    src="{{asset('assets/img/products/'~ product.image)}}"
+    class="product-image"
+  />
+  <div class="informations">
+    <h2>{{ product.name }}</h2>
+    <span class="single-price">{{ product.price }} €</span>
+    <p>{{ product.description }}</p>
+  </div>
+</div>
+
+
+{% if ingredients %}
+<div class="ingredients-container">
+  <h2 class="ingredients-title">Les ingrédients du {{ product.name }}</h2>
+  <p>Mais vous aurez beau essayer de le reproduire, ça ne sera jamais aussi bon !</p>
+  <div class="ingredients">
+    {% for ingredient in ingredients %}
+    <div class="ingredient">
+      <img
+        src="{{asset('assets/img/ingredients/'~ ingredient.image)}}"
+        alt=""
+        class="ingredient-image"
+      />
+      <h3>{{ ingredient.name }}</h3>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+{% endif %}
+
+{% if nutritions %}
+<div class="nutritions">
+  <h2 class="nutritions-title">Les infos nutritions du {{ product.name }}</h2>
+  <table>
+    <tbody>
+      <tr>
+        <td>Energie</td>
+        <td>{{ nutritions.energy }}</td>
+      </tr>
+      <tr>
+        <td>Gras</td>
+        <td>{{ nutritions.fat }}</td>
+      </tr>
+      <tr>
+        <td>Glucides</td>
+        <td>{{ nutritions.glucid }}</td>
+      </tr>
+      <tr>
+        <td>Fibres</td>
+        <td>{{ nutritions.fiber }}</td>
+      </tr>
+      <tr>
+        <td>Protéines</td>
+        <td>{{ nutritions.protein }}</td>
+      </tr>
+      <tr>
+        <td>Sucres</td>
+        <td>{{ nutritions.sugar }}</td>
+      </tr>
+      <tr>
+        <td>Sels</td>
+        <td>{{ nutritions.salt }}</td>
+      </tr>
+
+    </tbody>
+  </table>
+  {% endif %}
+
+</div>
+
+{% endblock %}

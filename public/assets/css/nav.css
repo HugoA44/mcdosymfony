@@ -1,0 +1,87 @@
+nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    margin: 0;
+  }
+  
+  nav img.logonav {
+    width: 30px;
+    margin: 10px;
+    transition: 0.3s;
+    margin-left: 25px;
+  }
+  nav img.logonav:hover {
+    transform: scale(1.1);
+    transition: 0.3s;
+  }
+  a {
+    text-decoration: none;
+    color: black;
+  }
+  nav ul.menu a:hover {
+    transform: scale(1.05);
+    transition: 0.3s;
+  }
+  
+  nav li:hover {
+    transform: scale(1.05);
+    transition: 0.3s;
+  }
+  nav .a-logonav {
+    width: 33.333%;
+    display: flex;
+    justify-content: flex-start;
+  }
+  nav ul.menu {
+    width: 33.333%;
+    display: flex;
+    justify-content: center;
+  }
+  nav ul.log {
+    width: 33.333%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  
+  nav ul.menu li:hover {
+    color: #ffce00;
+    transition: 0.3s;
+  }
+  
+  nav ul.menu li {
+    display: inline;
+    list-style-type: none;
+    margin: 0 20px;
+    color: #828eac;
+    font-size: 15px;
+  }
+  nav ul.log li {
+    display: inline;
+    list-style-type: none;
+    font-size: 15px;
+    color: #ffce00;
+    cursor: pointer;
+  }
+  nav ul.log li.login:hover {
+    color: #828eac;
+    transition: 0.3s;
+  }
+  nav ul.log li.signup {
+    padding: 10px 16px;
+    margin: 0 20px;
+    border-radius: 8px;
+    border: 1px;
+    border-color: #ffce00;
+    border-style: solid;
+    transition: 0.3s;
+  }
+  nav ul.log li.signup:hover {
+    border-radius: 8px;
+    background-color: #ffce00;
+    color: white;
+    transition: 0.3s;
+  }

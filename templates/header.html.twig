@@ -1,0 +1,17 @@
+{% block header %}
+
+<nav>
+  <a href="{{ path('index') }}" class="a-logonav">
+    <img src="{{asset('assets/img/logo.png')}}" alt="logo" class="logonav" />
+  </a>
+  <ul class="menu">
+    <a href="{{ path('index') }}"><li>Accueil</li></a>
+    <a href="{{ path('products') }}"><li>Produits</li></a>
+  </ul>
+  <ul class="log">
+    <a href="{{ path('admin') }}"><li class="signup">Admin</li></a>
+    <li class="login">Se connecter</li>
+    <li class="signup">S'inscrire</li>
+  </ul>
+</nav>
+{% endblock %}

@@ -1,0 +1,25 @@
+INSERT INTO `infos_nutrition` (`id`, `energy`, `fat`, `glucid`, `fiber`, `protein`, `sugar`, `salt`) VALUES
+(1, 232, 12, 19, 1, 12, 4, 1),
+(2, 242, 8, 29, 2, 12, 6, 1),
+(3, 242, 8, 29, 2, 12, 6, 1),
+(4, 259, 13, 19, 1, 15, 4, 1),
+(5, 41, 0, 10, 0, 0, 10, 0),
+(6, 0, 0, 0, 0, 0, 0, 0),
+(7, 35, 1, 4, 0, 2, 4, 0),
+(8, 26, 0, 7, 0, 0, 7, 0);
+
+INSERT INTO `product` (`id`, `name`, `description`, `image`, `price`, `type`, `category`, `nutrition_id`) VALUES
+(1, 'Big Mac', 'Mouthwatering perfection starts with two 100% pure beef patties and Big Mac® sauce sandwiched between a sesame seed bun. It’s topped off with pickles, crisp shredded lettuce, finely chopped onion and American cheese for a 100% beef burger with a taste lik', 't-mcdonalds-Big-Mac.jpg', 8, 'Burger', NULL, 1),
+(2, 'Hambuger', 'The original burger starts with a 100% pure beef burger seasoned with just a pinch of salt and pepper. Then, the McDonald’s burger is topped with a tangy pickle, chopped onions, ketchup and mustard. McDonald’s hamburger contains no artificial flavors, pre', 't-mcdonalds-Hamburger.jpg', 1, 'Burger', NULL, 2),
+(7, 'Cheeseburger', 'Our simple, classic cheeseburger begins with a 100% pure beef burger seasoned with just a pinch of salt and pepper. The McDonald’s Cheeseburger is topped with a tangy pickle, chopped onions, ketchup, mustard, and a slice of melty American cheese. It conta', 't-mcdonalds-Cheeseburger.jpg', 2, 'Burger', NULL, 3),
+(8, 'Double Cheeseburger', 'The McDonald\'s Double Cheeseburger features two 100% pure beef burger patties seasoned with just a pinch of salt and pepper. It\'s topped with tangy pickles, chopped onions, ketchup, mustard and two slices of melty American cheese. There are 450 calories i', 't-mcdonalds-Double-Cheeseburger.jpg', 4, 'Burger', NULL, 4),
+(9, 'Coca Cola ®', 'Coca-Cola® is a refreshing McDonald\'s soda option that complements all of your menu favorites. Have you ever wondered, is Coke® at McDonald’s different?', 't-mcdonalds-Coca-Cola-Classic-Small.jpg', 1, 'Drink', 'Soda', 5),
+(10, 'Sprite ®', 'Sprite fountain drink has a delicious lemon-lime taste and is available in sizes Extra Small, Small, Medium, and Large. Sprite is a caffeine-free soft drink and makes the perfect addition to any McDonald’s Combo Meal.', 't-mcdonalds-Sprite-Small.jpg', 1, 'Drink', 'Soda', 6),
+(11, 'Hot Chocolate McCafe shaked ', 'Try the McDonald’s Chocolate Shake, the perfect sweet treat for any time of the day. Our chocolate shake is made with delicious soft serve, chocolate syrup and finished off with a creamy whipped topping. McDonald\'s Chocolate Shake is available in small, m', 't-mcdonalds-Chocolate-McCafe-Shake-Medium.jpg', 2, 'Drink', 'McCafe', 7),
+(12, 'Iced tea', 'McDonald’s Iced Tea is made with a brisk blend of orange pekoe black tea, freshly brewed and served ice cold. McDonald’s Unsweet Iced Tea is available in extra small, small, medium and large on the McDonald’s drinks menu.', 't-mcdonalds-Iced-Tea-Large.jpg', 1, 'Drink', 'Soda', 8),
+(13, 'Vanilla Shake', 'The classic vanilla shake from McDonald’s. It’s made with our creamy vanilla soft serve and topped with whipped topping for a cool, tasty treat. Available in small, medium, and large. Check out all of McDonald’s Shakes and Desserts.', 't-mcdonalds-Vanilla-McCafe-Shake-Medium.jpg', 2, 'Drink', 'McCafe', NULL),
+(14, 'McCafé® Pumpkin Spice Latte', 'Enjoy a fall drink perfect for warming up to the crisp autumn air. Our pumpkin spice latte is freshly brewed and spiced to perfection with hints of pumpkin and cinnamon flavors. Espresso made from Rainforest Alliance Certified Beans™ blends with steamed w', 't-mcdonalds-pumpkin-spice-latte.jpg', 1, 'Drink', 'McCafe', NULL),
+(15, 'Fanta® Orange', 'McDonald’s Fanta® Orange is a caffeine-free soft drink full of bubbly, refreshing orange flavor. Fanta® soda is part of McDonald’s $1 Any Size Soft Drinks on the $1 $2 $3 Dollar Menu. Available in extra small, small, medium, and large fountain drink sizes', 't-mcdonalds-fanta-orange.jpg', 1, 'Drink', NULL, NULL),
+(16, 'Hamburger Happy Meal®', 'McDonald\'s Hamburger Happy Meal includes a juicy hamburger with kid-sized World Famous Fries® and apple slices. Then pick a kid’s drink: 1% Low Fat Milk Jug, reduced sugar* chocolate milk, DASANI® Water or Honest Kids® Appley Ever After® Organic Juice Dri', 'h-mcdonalds-Hamburger.jpeg', 4, 'Happy Meal', NULL, NULL),
+(17, '6 Piece Chicken McNuggets® Happy Meal', 'Enjoy a McDonald’s Happy Meal® and get six tender Chicken McNuggets® made with white meat with kid-sized World Famous Fries and a side of Apple Slices. Then pick a kids’ drink: 1% Low Fat Milk Jug, Reduced Sugar Low Fat Chocolate Milk Jug, DASANI® Water o', 'mcdonalds-Chicken-McNuggets-Mighty-Kids-Meals.jpeg', 6, 'Happy Meal', NULL, NULL),
+(18, '4 Piece Chicken McNuggets® Happy Meal', 'Grab a McDonald’s Happy Meal® and get four tender Chicken McNuggets® made with white meat with kid-sized World Famous Fries and a side of Apple Slices. Then pick a kids’ drink: 1% Low Fat Milk Jug, Reduced Sugar Low Fat Chocolate Milk Jug, DASANI® Water o', 'h-mcdonalds-Chicken-McNuggets.jpeg', 4, 'Happy Meal', NULL, NULL);

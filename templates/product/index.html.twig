@@ -1,0 +1,88 @@
+{% extends 'base.html.twig' %} {% block title %}Nos produits{%endblock %} {%
+block body %}
+
+<div class="products-header">
+  <h1 class="products-title">
+    Découvrez dès-maintenant tous <highlight>nos burgers.</highlight>
+  </h1>
+  <div class="div-products-logo">
+    <img
+      src="{{ asset('assets/img/logo.png') }}"
+      alt="logo"
+      class="products-logo"
+    />
+  </div>
+</div>
+
+<section id="products-all">
+  <div class="products-sidebar">
+    {# Tous nos produits #}
+    <a href="{{ path('products' ) }}">
+      <div class="products-type">
+        <img
+          src="{{ asset('assets/img/products/h-mcdonalds-Chicken-McNuggets.jpeg') }}"
+        />
+        <h4 class="products-type-name">Tous nos produits</h4>
+      </div>
+    </a>
+    {# Tous nos produits #}
+    <a href="{{ path('type', { type: "burger" }) }}">
+      <div class="products-type">
+        <img
+          src="{{ asset('assets/img/products/t-mcdonalds-Double-Cheeseburger.jpg') }}"
+        />
+        <h4 class="products-type-name">Burgers</h4>
+      </div>
+    </a>
+    {# Boissons #}
+    <a href="{{ path('type', { type: "drink" }) }}">
+      <div class="products-type">
+        <img
+          src="{{ asset('assets/img/products/t-mcdonalds-Iced-Tea-Large.jpg') }}"
+        />
+        <h4 class="products-type-name">Boissons</h4>
+      </div>
+    </a>
+    {# Happy Meal #}
+    <a href="{{ path('type', { type: "happy meal" }) }}">
+      <div class="products-type">
+        <img
+          src="{{ asset('assets/img/products/h-mcdonalds-Hamburger.jpeg') }}"
+        />
+        <h4 class="products-type-name">Happy Meal</h4>
+      </div>
+    </a>
+  </div>
+  <div class="products">
+    {% for product in products %}
+    <a href=" {{ path('product', { id: product.id }) }} ">
+      <div class="product-card">
+        <span class="price">{{ product.price }} €</span>
+        <img src="{{asset('assets/img/products/'~ product.image)}}" />
+        <h2>{{ product.name }}</h2>
+        <div class="buttons">
+          <svg
+            height="20px"
+            viewBox="0 -31 512.00026 512"
+            xmlns="http://www.w3.org/2000/svg"
+            class="cart-icon"
+          >
+            <path
+              d="m164.960938 300.003906h.023437c.019531 0 .039063-.003906.058594-.003906h271.957031c6.695312 0 12.582031-4.441406 14.421875-10.878906l60-210c1.292969-4.527344.386719-9.394532-2.445313-13.152344-2.835937-3.757812-7.269531-5.96875-11.976562-5.96875h-366.632812l-10.722657-48.253906c-1.527343-6.863282-7.613281-11.746094-14.644531-11.746094h-90c-8.285156 0-15 6.714844-15 15s6.714844 15 15 15h77.96875c1.898438 8.550781 51.3125 230.917969 54.15625 243.710938-15.941406 6.929687-27.125 22.824218-27.125 41.289062 0 24.8125 20.1875 45 45 45h272c8.285156 0 15-6.714844 15-15s-6.714844-15-15-15h-272c-8.269531 0-15-6.730469-15-15 0-8.257812 6.707031-14.976562 14.960938-14.996094zm312.152343-210.003906-51.429687 180h-248.652344l-40-180zm0 0"
+            />
+            <path
+              d="m150 405c0 24.8125 20.1875 45 45 45s45-20.1875 45-45-20.1875-45-45-45-45 20.1875-45 45zm45-15c8.269531 0 15 6.730469 15 15s-6.730469 15-15 15-15-6.730469-15-15 6.730469-15 15-15zm0 0"
+            />
+            <path
+              d="m362 405c0 24.8125 20.1875 45 45 45s45-20.1875 45-45-20.1875-45-45-45-45 20.1875-45 45zm45-15c8.269531 0 15 6.730469 15 15s-6.730469 15-15 15-15-6.730469-15-15 6.730469-15 15-15zm0 0"
+            />
+          </svg>
+          <button class="btn-full hvr-bounce-to-right">Lire plus</button>
+        </div>
+      </div>
+    </a>
+    {% endfor %}
+  </div>
+</section>
+
+{% endblock %}
