@@ -9,8 +9,11 @@
     <a href="{{ path('products') }}"><li>Produits</li></a>
   </ul>
   <ul class="log">
+    {% if is_granted('ROLE_ADMIN') %}
     <a href="{{ path('admin') }}"><li class="signup">Admin</li></a>
-    <li class="login">Se connecter</li>
+    {%endif%}
+
+    <a href="{{ path('login') }}"><li class="login">Se connecter</li></a>
     <li class="signup">S'inscrire</li>
   </ul>
 </nav>

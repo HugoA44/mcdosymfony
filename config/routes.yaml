@@ -15,6 +15,10 @@ type:
     controller: App\Controller\ProductController::productsType
 
 
+login:
+    path: /login
+    controller: App\Controller\SecurityController::login
+
 
 
 admin:
@@ -28,3 +32,15 @@ adminRemoveProduct:
 addproduct:
     path: /admin/addproduct
     controller: App\Controller\admin\AdminController::addproduct
+
+updateProduct:
+    path: /admin/updateproduct/{id}
+    controller: App\Controller\admin\AdminController::updateproduct
+
+addIngredientInProduct:
+    path: /admin/addingredientInProduct/{id}
+    controller: App\Controller\admin\AdminController::addIngredientInProduct
+
+addIngredient:
+    path: /admin/addingredient
+    controller: App\Controller\admin\AdminController::addIngredient
